@@ -2,6 +2,8 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+    alias(libs.plugins.kapt)
+    alias(libs.plugins.dagger.hilt)
 }
 
 android {
@@ -49,6 +51,22 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+
+//    Room
+    implementation(libs.room)
+    kapt(libs.room.compiler)
+
+//    Hilt
+    implementation(libs.hilt)
+    kapt(libs.hilt.compiler)
+
+//    Retrofit
+    implementation(libs.retrofit)
+    implementation(libs.gson.converter)
+
+//    Coroutines
+    implementation(libs.coroutines)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

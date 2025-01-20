@@ -15,6 +15,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
@@ -42,9 +43,14 @@ fun CardInfoContainer(binResponse: BinResponse?) {
             ) {
                 Box {
                     Column {
-                        Icon(painterResource(R.drawable.ic_bank), contentDescription = "Bank")
+                        Icon(
+                            painterResource(R.drawable.ic_bank),
+                            contentDescription = stringResource(
+                                R.string.e_bank
+                            )
+                        )
                         Text(
-                            text = "BANK",
+                            text = stringResource(R.string.e_bank).uppercase(),
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold
                         )
@@ -70,10 +76,10 @@ fun CardInfoContainer(binResponse: BinResponse?) {
                     Column {
                         Icon(
                             painterResource(R.drawable.ic_card_brand),
-                            contentDescription = "Brand"
+                            contentDescription = stringResource(R.string.e_brand)
                         )
                         Text(
-                            text = "BRAND",
+                            text = stringResource(R.string.e_brand).uppercase(),
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold
                         )
@@ -89,10 +95,10 @@ fun CardInfoContainer(binResponse: BinResponse?) {
                     Column {
                         Icon(
                             painterResource(R.drawable.ic_network),
-                            contentDescription = "Scheme / Network"
+                            contentDescription = stringResource(R.string.e_scheme_network)
                         )
                         Text(
-                            text = "SCHEME / NETWORK",
+                            text = stringResource(R.string.e_scheme_network).uppercase(),
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold
                         )
@@ -106,9 +112,12 @@ fun CardInfoContainer(binResponse: BinResponse?) {
 
                 Box {
                     Column {
-                        Icon(painterResource(R.drawable.ic_type_card), contentDescription = "Type")
+                        Icon(
+                            painterResource(R.drawable.ic_type_card),
+                            contentDescription = stringResource(R.string.e_type)
+                        )
                         Text(
-                            text = "TYPE",
+                            text = stringResource(R.string.e_type).uppercase(),
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold
                         )
@@ -126,9 +135,12 @@ fun CardInfoContainer(binResponse: BinResponse?) {
             ) {
                 Box {
                     Column {
-                        Icon(painterResource(R.drawable.ic_country), contentDescription = "Country")
+                        Icon(
+                            painterResource(R.drawable.ic_country),
+                            contentDescription = stringResource(R.string.e_country)
+                        )
                         Text(
-                            text = "COUNTRY",
+                            text = stringResource(R.string.e_country).uppercase(),
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold
                         )
@@ -149,10 +161,10 @@ fun CardInfoContainer(binResponse: BinResponse?) {
                     Column {
                         Icon(
                             painterResource(R.drawable.ic_number_card),
-                            contentDescription = "Card Number"
+                            contentDescription = stringResource(R.string.e_card_number)
                         )
                         Text(
-                            text = "CARD NUMBER",
+                            text = stringResource(R.string.e_card_number).uppercase(),
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold
                         )
@@ -169,9 +181,12 @@ fun CardInfoContainer(binResponse: BinResponse?) {
 
                 Box {
                     Column {
-                        Icon(painterResource(R.drawable.ic_prepair), contentDescription = "Prepaid")
+                        Icon(
+                            painterResource(R.drawable.ic_prepair),
+                            contentDescription = stringResource(R.string.e_prepaid)
+                        )
                         Text(
-                            text = "PREPAID",
+                            text = stringResource(R.string.e_prepaid).uppercase(),
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold
                         )
@@ -186,10 +201,10 @@ fun CardInfoContainer(binResponse: BinResponse?) {
                     Column {
                         Icon(
                             painterResource(R.drawable.ic_currency),
-                            contentDescription = "Currency"
+                            contentDescription = stringResource(R.string.e_currency)
                         )
                         Text(
-                            text = "CURRENCY",
+                            text = stringResource(R.string.e_currency).uppercase(),
                             style = MaterialTheme.typography.labelSmall,
                             fontWeight = FontWeight.Bold
                         )

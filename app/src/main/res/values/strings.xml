@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">Checking_Bank_Cards</string>
+    <string name="enter_a_bin">Введите BIN (6-8 цифр)</string>
+    <string name="error_bin">BIN должен содержать 6 или 8 цифр</string>
+    <string name="search_card">Поиск карты</string>
+    <string name="query_history">История запросов</string>
+    <string name="back">Назад</string>
+    <string name="bin">BIN: %1$s</string>
+    <string name="bank">Банк: %1$s</string>
+    <string name="country">Страна: %1$s %2$s</string>
+    <string name="type_card">Тип карты: %1$s</string>
 </resources>

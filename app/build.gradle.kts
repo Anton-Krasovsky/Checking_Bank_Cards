@@ -8,11 +8,12 @@ plugins {
 
 android {
     namespace = "by.tigertosh.checking_bank_cards"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "by.tigertosh.checking_bank_cards"
         minSdk = 28
+        //noinspection OldTargetApi
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -51,9 +52,12 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.lifecycle.viewmodel)
 
 //    Room
     implementation(libs.room)
+    implementation(libs.androidx.navigation.compose)
+    implementation(libs.room.ktx)
     kapt(libs.room.compiler)
 
 //    Hilt

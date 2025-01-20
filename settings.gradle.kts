@@ -21,4 +21,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Checking_Bank_Cards"
 include(":app")
- 
+include(":domain")
+include(":data")

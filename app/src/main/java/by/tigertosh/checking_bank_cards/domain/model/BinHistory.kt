@@ -7,5 +7,12 @@ data class BinHistory(
     val type: String?,
     val brand: String?,
     val bankName: String?,
-    val countryName: String?
+    val bankUrl: String?,
+    val bankPhone: String?,
+    val bankCity: String?,
+    val countryName: String?,
+    val countryEmoji: String?,
+    val countryLatitude: Int?,
+    val countryLongitude: Int?,
+    val timestamp: Long = System.currentTimeMillis()
 )

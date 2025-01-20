@@ -6,7 +6,6 @@ import androidx.activity.compose.setContent
 import androidx.lifecycle.viewmodel.compose.viewModel
 import by.tigertosh.checking_bank_cards.presentation.viewmodel.BinHistoryViewModel
 import by.tigertosh.checking_bank_cards.presentation.viewmodel.BinViewModel
-import by.tigertosh.checking_bank_cards.data.navigation.AppNavHost
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

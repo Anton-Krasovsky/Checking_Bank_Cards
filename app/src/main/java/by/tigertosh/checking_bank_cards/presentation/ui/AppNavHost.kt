@@ -1,12 +1,10 @@
-package by.tigertosh.checking_bank_cards.data.navigation
+package by.tigertosh.checking_bank_cards.presentation.ui
 
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import by.tigertosh.checking_bank_cards.data.local.entity.BinHistoryEntity
-import by.tigertosh.checking_bank_cards.presentation.ui.BinHistoryScreen
-import by.tigertosh.checking_bank_cards.presentation.ui.FirstScreen
+import by.tigertosh.checking_bank_cards.domain.model.BinHistory
 import by.tigertosh.checking_bank_cards.presentation.viewmodel.BinHistoryViewModel
 import by.tigertosh.checking_bank_cards.presentation.viewmodel.BinViewModel
 
@@ -27,7 +25,7 @@ fun AppNavHost(
                     val response = binViewModel.binResponse.value
                     if (response != null) {
                         binHistoryViewModel.saveBinHistory(
-                            BinHistoryEntity(
+                            BinHistory(
                                 bin = bin,
                                 scheme = response.scheme,
                                 type = response.type,

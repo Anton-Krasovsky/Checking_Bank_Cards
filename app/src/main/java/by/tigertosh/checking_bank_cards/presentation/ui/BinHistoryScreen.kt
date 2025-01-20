@@ -21,8 +21,8 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import by.tigertosh.checking_bank_cards.R
+import by.tigertosh.checking_bank_cards.domain.model.BinHistory
 import by.tigertosh.checking_bank_cards.presentation.viewmodel.BinHistoryViewModel
-import by.tigertosh.checking_bank_cards.data.local.entity.BinHistoryEntity
 
 @Composable
 fun BinHistoryScreen(
@@ -60,7 +60,7 @@ fun BinHistoryScreen(
 }
 
 @Composable
-fun BinHistoryItem(binHistory: BinHistoryEntity) {
+fun BinHistoryItem(binHistory: BinHistory) {
     Card(
         modifier = Modifier
             .fillMaxWidth()

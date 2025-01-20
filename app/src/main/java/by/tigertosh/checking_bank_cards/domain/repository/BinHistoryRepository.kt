@@ -1,19 +1,11 @@
 package by.tigertosh.checking_bank_cards.domain.repository
 
-import by.tigertosh.checking_bank_cards.data.local.dao.BinHistoryDao
-import by.tigertosh.checking_bank_cards.data.local.entity.BinHistoryEntity
-import by.tigertosh.checking_bank_cards.data.remote.BinApiService
-import javax.inject.Inject
+import by.tigertosh.checking_bank_cards.domain.model.BinHistory
+import by.tigertosh.checking_bank_cards.domain.model.BinResponse
+import kotlinx.coroutines.flow.Flow
 
-class BinHistoryRepository @Inject constructor(
-    private val dao: BinHistoryDao,
-    private val apiService: BinApiService
-) {
-    fun getBinHistory() = dao.getAllBinHistory()
-
-    suspend fun saveBinHistory(binHistory: BinHistoryEntity) {
-        dao.insertBinHistory(binHistory)
-    }
-
-    suspend fun fetchBinDetails(bin: String) = apiService.getBinDetails(bin)
+interface BinHistoryRepository {
+    fun getBinHistory(): Flow<List<BinHistory>>
+    suspend fun saveBinHistory(binHistory: BinHistory)
+    suspend fun fetchBinDetails(bin: String): BinResponse
 }
